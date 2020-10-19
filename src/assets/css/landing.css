@@ -219,6 +219,12 @@ text-decoration-line: underline;
 color: #FFFFFF;
 }
 
+.footer a:hover {
+color: white;
+text-decoration: none;
+
+}
+
 .footer h3 {
   font-style: normal;
 font-weight: bold;
@@ -255,4 +261,32 @@ color: #101928;
   box-shadow: 0px 12px 28px rgba(43, 102, 160, 0.15);
 border-radius: 16px;
 padding: 40px;
+}
+
+.prefooter {
+  padding: 60px;
+}
+
+.prefooter img {
+  max-width: 230px;
+}
+
+.prefooter a {
+  font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+color: #101928;
+vertical-align: middle;
+display: block;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+
+.prefooter img {
+  vertical-align: middle;
+  margin-right:  8px;
+}
+.prefooter span {
+  vertical-align: middle;
+  text-decoration: underline;
 }

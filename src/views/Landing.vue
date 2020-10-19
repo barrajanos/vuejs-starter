@@ -285,13 +285,56 @@ It can happen that the demand and supply don’t meet. We can help you connect w
   <div class="container">
 <div class="columns">
   <div class="column is-4">
-    Test
+    <h3 class="is-size-5 has-text-weight-bold">Visit us at</h3>
+    <p>1139 Budapest, Váci út 99.</p>
+    <a href="">
+                          <img
+                          src="../assets/img/navigation.svg"
+                          alt="Direction"
+                      >
+                      <span>Directions</span>
+      </a>
   </div>
     <div class="column is-4">
-    Test
+        <h3 class="is-size-5 has-text-weight-bold">Contact us</h3>
+        <p>Should you have any questions, 
+feel free to contact us</p>
+    <a href="">
+                          <img
+                          src="../assets/img/messenger.svg"
+                          alt="Send message"
+                      >
+                      <span>Send message</span>
+      </a>
+          <a href="">
+                          <img
+                          src="../assets/img/tel.svg"
+                          alt="Telephone"
+                      >
+                      <span>06 30 792 64 70</span>
+      </a>
+                <a href="">
+                          <img
+                          src="../assets/img/email.svg"
+                          alt="E-mail"
+                      >
+                      <span>info@ref.com</span>
+      </a>
   </div>
     <div class="column is-4">
-    Test
+        <h3 class="is-size-5 has-text-weight-bold">We are made possible by</h3>
+                        <a href="#" class="mr-5">
+                    <img
+                          src="../assets/img/romaeducationfund.png"
+                          alt="Roma Education Fund"
+                      >
+        </a>
+                <a href="#" class="mr-5">
+                    <img
+                          src="../assets/img/velux.png"
+                          alt="Velux"
+                      >
+        </a>
   </div>
 </div>
   </div>
