@@ -6,6 +6,7 @@ import App from './App.vue'
 import router from './router'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
+import VueFbCustomerChat from 'vue-fb-customer-chat'
 
 Vue.use(Buefy)
 
@@ -15,6 +16,12 @@ Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
   linkResolver,
   htmlSerializer
+})
+ 
+Vue.use(VueFbCustomerChat, {
+  page_id: 'barrajanos', //  change 'null' to your Facebook Page ID,
+  theme_color: '#333333', // theme color in HEX
+  locale: 'en_US', // default 'en_US'
 })
 
 var VueScrollTo = require('vue-scrollto');

@@ -171,7 +171,7 @@
       <div class="column is-one-third">
             <h1 class="is-size-3 has-text-weight-bold">What is EMPYR?</h1>
             <div class="mt-3">EMPYR is part of Roma Education Fund’s SHAPYR program. Besides other activities we support young adults in their preparations for employment. The name itself is an acronym: EMP refers to employment while YR stands for young Roma. The project is supported by the Velux Foundations. Our services are completely free for you.</div>
-            <div class="mt-5"><strong>If you are interested, <a href=""> register</a> and our colleague will reach out to you soon.</strong></div>
+            <div class="mt-5"><strong>If you are interested, <a href="" v-scroll-to="'#ko-scroll'"> register</a> and our colleague will reach out to you soon.</strong></div>
       </div>
     </div>
   </div>
