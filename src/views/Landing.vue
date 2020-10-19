@@ -55,7 +55,7 @@
             <h1 class="title is-size-2">
               <p>We aim to help you get the skills you need and find employment!</p>
             </h1>
-              <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button">Intrested</b-button>
+              <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'">Intrested</b-button>
         </div>
         <div class="column is-three-fifths is-hidden-mobile">
             <figure class="image header-image">
@@ -66,7 +66,7 @@
     </div>
   </div>
 </section>
-<section class="ko is-centered">
+<section class="ko is-centered" id="ko-scroll">
 <div class="container">
   <div class="columns is-centered">
     <div class="column is-half">
@@ -98,7 +98,7 @@
           </b-field>
       </div>
     </div>
-              <div class="error-message mb-4">
+              <div class="error-message mb-4"  v-show="radioRoma === 'no'">
       <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
       <div class="mt-2"><a href="#">Learn more about our work</a></div>
       </div>
@@ -132,7 +132,7 @@
           </b-field>
       </div>
     </div>
-          <div class="error-message">
+          <div class="error-message" v-show="radioLive === 'no'">
       <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
       <div class="mt-1">In case you would like us to let you know when our program becomes available in your county, tell us your email address.</div>
       </div>
@@ -140,7 +140,14 @@
     <hr>
     <div class="columns is-centered has-text-centered">
       <div class="column">
+        <div class="good" v-if="radioLive === 'yes' & radioRoma === 'yes' ">
                     <b-button type="is-primary" size="is-large" class="red button-radius mt-10">Let’s get started</b-button>
+        </div>
+       <div class="notgood" v-else>
+                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled>Let’s get started</b-button>
+        </div>
+
+
               <p class="mt-3"><b-icon icon="clock-time-one-outline" size="is-small"></b-icon> It takes only <strong>5 minutes</strong></p>
               </div>
     </div>
@@ -171,7 +178,7 @@
 </section>
 <section class="services">
   <div class="container">
-    <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-5">Services we provide</h1>
+    <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6">Services we provide</h1>
       <div class="columns is-offset-one-fifth is-centered mt-6">
       <div class="column is-one-third">
       <h2>For employment</h2>
