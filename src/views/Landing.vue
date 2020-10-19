@@ -183,6 +183,7 @@
 Having a great idea and an enterprenuerial mindset is a great combination to start your own business. There are state measures availble for start ups, in addition we can support you with trainings and couching.
   </div>
 </div>
+
 <div class="service-item mb-5">
   <div class="service-name mb-2">
     <img class="" src="../assets/img/contact-to-employers.svg" alt="Contact to employers">
@@ -192,25 +193,46 @@ Having a great idea and an enterprenuerial mindset is a great combination to sta
 It can happen that the demand and supply don’t meet. We can help you connect with the most important employers based on your quailification.
   </div>
 </div>
+
+<div class="service-item mb-5">
+  <div class="service-name mb-2">
+    <img class="" src="../assets/img/soft-skill.svg" alt="Soft-skills traning">
+<span class="" >Soft-skills traning</span>
+  </div>
+  <div class="service-desc mb-6">
+Having the right qualification is a good start, but when it comes to employment you need a set of skills to prove that you are the right candidate. With our trainings and workshop we can help you with CV writing, job interviews, and other soft skills you want to develop.</div>
+</div>
+
+<div class="service-item mb-5">
+  <div class="service-name mb-2">
+    <img class="" src="../assets/img/supportinjobsearch.svg" alt="Support in job search">
+<span class="" >Support in job search</span>
+  </div>
+  <div class="service-desc mb-6">
+Are you familiar with the most popular search engines in Hungary? What other tools can you use to find the right workplace? You can count on us to help you navigate in the are of job search.</div>
+</div>
+
 <hr class="mt-5 mb-5">
+
   <h2 class="mb-5">To support studies and employment</h2>
+
 <div class="service-item mb-6">
   <div class="service-name mb-2">
-    <img class="" src="../assets/img/self-employment.svg" alt="Self employment">
+    <img class="" src="../assets/img/second-chance.svg" alt="Second-chance programs">
 <span class="" >Second-chance programs</span>
   </div>
   <div class="service-desc mt-4">
-Having a great idea and an enterprenuerial mindset is a great combination to start your own business. There are state measures availble for start ups, in addition we can support you with trainings and couching.
+Completing primary and secondary school are the basis of further studies leading to successful employment. Completing formerly intermitted studies can go hand in hand with gaining a vocational qualification or the matura. Trainings usually last for 2 to 4 years.
   </div>
 </div>
+
 <div class="service-item mb-5">
   <div class="service-name mb-2">
-    <img class="" src="../assets/img/contact-to-employers.svg" alt="Contact to employers">
+    <img class="" src="../assets/img/vocational-traning.svg" alt="Vocational training">
 <span class="" >Vocational training</span>
   </div>
   <div class="service-desc mb-6">
-It can happen that the demand and supply don’t meet. We can help you connect with the most important employers based on your quailification.
-  </div>
+Vocational trainings, short-, and long-term, are organized by public and private schools and usually end with a state-recognized vocational qualification (OKJ in Hungary). There is a wide range of professions that can be studied, from hairdresser to health insurance agent, or car mechanic.</div>
 </div>
 </div>
   </div>
