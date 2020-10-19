@@ -1,0 +1,196 @@
+.empyr-hero {
+  background-color: #FFF6E3 !important;
+  color: #101928 !important;
+  padding-bottom: 0px !important;
+}
+
+.hero-body{
+  padding-bottom: 0px !important;
+  padding-top: 2rem !important;
+}
+
+.empyr-hero h1 {
+  color: #101928 !important;
+  font-weight: 800;
+}
+
+.navigation-header {
+  padding:0 !important;
+  padding-top: 20px !important;
+}
+
+.logodesc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #101928;
+  opacity: 0.8;
+  max-width: 250px;
+}
+
+.language-selector {
+  border: 1px solid #D4D4D4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: #101928 !important;
+  background: transparent !important;
+  font-weight: bold;
+}
+
+.language-selector button {
+ background-color: transparent !important;
+ color: #101928 !important;
+}
+
+.language-selector button.is-active {
+  background-color: white !important;
+}
+
+a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
+  background-color: #101928 !important;
+}
+
+.button.is-dark {
+  font-weight: bold !important;
+}
+
+.image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  text-align: right;
+  float: right;
+}
+
+.ko {
+  background: #FAFBFC;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.ko-item {
+list-style: disc outside;
+background-color: #FFFFFF !important;
+}
+
+.ko-card {
+  margin-top: 40px;
+  background-color: #FFFFFF !important;
+box-shadow: 8px 6px 24px rgba(43, 102, 160, 0.15);
+border-radius: 32px;
+max-width: 720px;
+padding: 40px !important;
+}
+
+.button-radius {
+  border-radius: 600px !important;
+}
+
+.button.red  {
+  background-color: #D51F2D !important;
+}
+
+.whatis {
+  background: #FFF8F8;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.error-message {
+  background-color: #FDE7E3;
+  padding: 12px;
+  color: #910642 !important;
+  font-size: 16px;
+line-height: 20px;
+border-radius: 8px;
+}
+
+.error-message strong {
+  color: #910642 !important;
+}
+
+.error-message a {
+  color: #910642 !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.whatis .contact .name {
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.whatis .contact .title {
+font-size: 18px;
+line-height: 22px;
+color: #4F4F4F;
+font-weight: normal;
+}
+
+.whatis .contact .email {
+  font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+text-decoration-line: underline;
+
+color: #000000;
+}
+
+.whatis .contact-image {
+  width: 288px !important;
+  height: 288px !important;
+}
+
+.ko button {
+  font-weight: bold;
+}
+
+.whatis a {
+  text-decoration-line: underline;  
+  color: #000000 !important;
+}
+
+.services {
+  padding: 90px;
+}
+
+.services h2 {
+  font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 33px;
+color: #606060;
+}
+
+.service-name {
+  font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 24px;
+color: #101928;
+}
+
+.service-desk {
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 24px;
+color: #101928;
+opacity: 0.9;
+}
+
+.service-name img {
+  vertical-align: middle;
+}
+
+.service-name span {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.services-items {
+  max-width: 720px;
+}

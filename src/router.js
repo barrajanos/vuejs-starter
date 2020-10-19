@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import NotFound from './views/NotFound.vue'
-import Preview from './views/Preview.vue'
-import Tutorial from './views/Tutorial.vue'
+import Landing from './views/Landing.vue'
 
 Vue.use(Router)
 
@@ -11,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: { name: 'tutorial' }
+      redirect: { name: 'landing' }
     },
     {
       path: '/not-found',
@@ -19,14 +18,9 @@ export default new Router({
       component: NotFound
     },
     {
-      path: '/preview',
-      name: 'preview',
-      component: Preview
-    },
-    {
-      path: '/tutorial',
-      name: 'tutorial',
-      component: Tutorial
+      path: '/landing',
+      name: 'landing',
+      component: Landing
     },
     {
       path: '*',
