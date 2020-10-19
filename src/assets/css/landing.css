@@ -194,3 +194,65 @@ opacity: 0.9;
 .services-items {
   max-width: 720px;
 }
+
+.testimonial {
+ padding: 90px;
+ background-color: #F5FAFF;
+}
+
+.footer {
+  background-color: #333333!important;
+  color: #FFFFFF !important;
+}
+
+.footer hr {
+  background-color: #C4C4C4;
+  opacity: 0.3;
+}
+
+.footer a {
+  font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+text-decoration-line: underline;
+color: #FFFFFF;
+}
+
+.footer h3 {
+  font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+}
+
+.testimonial-item .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #101928;
+}
+
+.testimonial-item .subtitle {
+  font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+
+color: #101928;
+}
+
+.testimonial-item .name {
+  font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 23px;
+color: #101928;
+}
+
+.testimonial-item .card {
+  box-shadow: 0px 12px 28px rgba(43, 102, 160, 0.15);
+border-radius: 16px;
+padding: 40px;
+}

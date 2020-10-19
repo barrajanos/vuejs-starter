@@ -138,7 +138,7 @@
       </div>
   </div>
     <hr>
-    <div class="columns is-centered has-text-centered	">
+    <div class="columns is-centered has-text-centered">
       <div class="column">
                     <b-button type="is-primary" size="is-large" class="red button-radius mt-10">Let’s get started</b-button>
               <p class="mt-3"><b-icon icon="clock-time-one-outline" size="is-small"></b-icon> It takes only <strong>5 minutes</strong></p>
@@ -192,7 +192,7 @@ Having a great idea and an enterprenuerial mindset is a great combination to sta
 It can happen that the demand and supply don’t meet. We can help you connect with the most important employers based on your quailification.
   </div>
 </div>
-<hr>
+<hr class="mt-5 mb-5">
   <h2 class="mb-5">To support studies and employment</h2>
 <div class="service-item mb-6">
   <div class="service-name mb-2">
@@ -213,6 +213,73 @@ It can happen that the demand and supply don’t meet. We can help you connect w
   </div>
 </div>
 </div>
+  </div>
+</section>
+<section class="testimonial">
+  <div class="container">
+      <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-5">Testimonials</h1>
+      <div class="testimonial-items">
+        <div class="testimonial-item">
+          <div class="card">
+              <div class="card-content">
+                      <img
+                          src="../assets/img/qu.svg"
+                          alt="Testimonial icon"
+                      >
+                   <p class="title mt-5">
+    SHAPYR provides regular trainings, which I think is very important.
+    </p>
+     <p class="subtitle">
+      I will be 20 years old and I am currently a student of the Ganz Ábrahám Bilingual Secondary Vocational School.
+    </p>
+              <div class="media levels is-vcentered">
+                <div class="level">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="../assets/img/test-image.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="name is-4">Oszkár Balogh</p>
+                </div>
+                </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+  </div>
+</section>
+<section class="prefooter">
+  <div class="container">
+
+  </div>
+</section>
+<section class="footer has-text-centered">
+  <div class="container">
+    <h3 class="mb-5">Connect with us</h3>
+    <div class="social">
+        <a href="#" class="mr-5">
+                    <img
+                          src="../assets/img/fb.svg"
+                          alt="Empyr"
+                      >
+        </a>
+        <a href="#">
+                    <img
+                          src="../assets/img/twitter.svg"
+                          alt="Empyr"
+                      >
+        </a>
+        <a href="#" class="ml-5">
+                    <img
+                          src="../assets/img/instagram.svg"
+                          alt="Empyr"
+                      >
+        </a>
+    </div>
+    <hr>
+    <a href="">Privacy Policy</a>
   </div>
 </section>
 </div>
