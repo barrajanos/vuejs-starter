@@ -173,7 +173,7 @@
   <div class="container">
     <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-5">Services we provide</h1>
 <div class="services-items">
-  <h2 class="mb-5">For employment</h2>
+  <h2 class="mb-6">For employment</h2>
 <div class="service-item mb-6">
   <div class="service-name mb-2">
     <img class="" src="../assets/img/self-employment.svg" alt="Self employment">
@@ -214,7 +214,7 @@ Are you familiar with the most popular search engines in Hungary? What other too
 
 <hr class="mt-5 mb-5">
 
-  <h2 class="mb-5">To support studies and employment</h2>
+  <h2 class="mt-6 mb-6">To support studies and employment</h2>
 
 <div class="service-item mb-6">
   <div class="service-name mb-2">
@@ -234,6 +234,34 @@ Completing primary and secondary school are the basis of further studies leading
   <div class="service-desc mb-6">
 Vocational trainings, short-, and long-term, are organized by public and private schools and usually end with a state-recognized vocational qualification (OKJ in Hungary). There is a wide range of professions that can be studied, from hairdresser to health insurance agent, or car mechanic.</div>
 </div>
+
+<div class="service-item mb-5">
+  <div class="service-name mb-2">
+    <img class="" src="../assets/img/studiesforthematura.svg" alt="Studies for the matura">
+<span class="" >Studies for the matura</span>
+  </div>
+  <div class="service-desc mb-6">
+For those already having a vocational qualification but lacking a matura or having a secondary level education without the matura, preparation trainings for matriculation exams are organized regularly, specifically for adults. The lenght of the training is usually 2 years.</div>
+</div>
+
+<div class="service-item mb-5">
+  <div class="service-name mb-2">
+    <img class="" src="../assets/img/advanced-level-vocational.svg" alt="Studies for the matura">
+<span class="" >Advanced-level vocational training</span>
+  </div>
+  <div class="service-desc mb-6">
+Advanced-level vocation trainings are usually organized by universities. The two-year programs can be completed after secondary school and can be continued on tertiary level as well. There is a wide range of fields taught from finance to engineering.</div>
+</div>
+
+<div class="service-item mb-5">
+  <div class="service-name mb-2">
+    <img class="" src="../assets/img/language-course.svg" alt="Language course">
+<span class="" >Language course</span>
+  </div>
+  <div class="service-desc mb-6">
+We organize language trainings for our beneficiaries in English, German, Spanish and other world languages. Foreign language proficiency can significantly increase your chances in the labor market. </div>
+</div>
+
 </div>
   </div>
 </section>
