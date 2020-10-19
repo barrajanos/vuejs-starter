@@ -218,8 +218,39 @@ It can happen that the demand and supply don’t meet. We can help you connect w
 <section class="testimonial">
   <div class="container">
       <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-5">Testimonials</h1>
-      <div class="testimonial-items">
-        <div class="testimonial-item">
+      <div class="testimonial-items columns">
+
+
+        <div class="testimonial-item column is-half">
+          <div class="card">
+              <div class="card-content">
+                      <img
+                          src="../assets/img/qu.svg"
+                          alt="Testimonial icon"
+                      >
+                   <p class="title mt-5">
+    SHAPYR provides regular trainings, which I think is very important.
+    </p>
+     <p class="subtitle">
+      I will be 20 years old and I am currently a student of the Ganz Ábrahám Bilingual Secondary Vocational School.
+    </p>
+              <div class="media levels is-vcentered">
+                <div class="level">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="../assets/img/test-image.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="name is-4">Oszkár Balogh</p>
+                </div>
+                </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+                <div class="testimonial-item column is-half">
           <div class="card">
               <div class="card-content">
                       <img
@@ -252,7 +283,17 @@ It can happen that the demand and supply don’t meet. We can help you connect w
 </section>
 <section class="prefooter">
   <div class="container">
-
+<div class="columns">
+  <div class="column is-4">
+    Test
+  </div>
+    <div class="column is-4">
+    Test
+  </div>
+    <div class="column is-4">
+    Test
+  </div>
+</div>
   </div>
 </section>
 <section class="footer has-text-centered">
