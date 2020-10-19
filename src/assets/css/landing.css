@@ -2,6 +2,11 @@
   background-color: #FFF6E3 !important;
   color: #101928 !important;
   padding-bottom: 0px !important;
+  background-image: url('../img/header-background.svg')!important;
+  background-origin: content-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-body{
@@ -12,6 +17,13 @@
 .empyr-hero h1 {
   color: #101928 !important;
   font-weight: 800;
+}
+
+.empyr-hero .main-button {
+ border-radius: 500px;
+ padding-left: 40px;
+ padding-right: 40px;
+ background-color: #101928;
 }
 
 .navigation-header {
@@ -56,7 +68,7 @@ a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, butto
 }
 
 .image img {
-  max-width: 100% !important;
+ max-width: 531px !important;
   max-height: 100% !important;
   width: auto !important;
   text-align: right;
@@ -65,8 +77,8 @@ a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, butto
 
 .ko {
   background: #FAFBFC;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .ko-item {
@@ -89,12 +101,19 @@ padding: 40px !important;
 
 .button.red  {
   background-color: #D51F2D !important;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .whatis {
   background: #FFF8F8;
-  padding-top: 90px;
-  padding-bottom: 60px;
+  background-image: url('../img/second-background.svg')!important;
+  background-origin: content-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 220px;
+  padding-bottom: 140px;
 }
 
 .error-message {
@@ -119,7 +138,8 @@ border-radius: 8px;
 .whatis .contact .name {
   font-size: 22px;
   line-height: 28px;
-  color: #000000;
+  color: #101928;
+  font-weight: 600;
 }
 
 .whatis .contact .title {
@@ -136,7 +156,7 @@ font-size: 18px;
 line-height: 23px;
 text-decoration-line: underline;
 
-color: #000000;
+color: #101928;
 }
 
 .whatis .contact-image {
@@ -191,13 +211,19 @@ opacity: 0.9;
   margin-left: 8px;
 }
 
-.services-items {
+.service-items {
   max-width: 720px;
 }
 
 .testimonial {
- padding: 90px;
+ padding-top: 120px;
+ padding-bottom: 140px;
  background-color: #F5FAFF;
+ background-image: url('../img/third-background.svg')!important;
+ background-origin: content-box;
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
 }
 
 .footer {

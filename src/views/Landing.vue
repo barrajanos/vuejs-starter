@@ -55,9 +55,9 @@
             <h1 class="title is-size-2">
               <p>We aim to help you get the skills you need and find employment!</p>
             </h1>
-              <b-button type="is-dark" size="is-medium" icon-left="arrow-down">Intrested</b-button>
+              <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button">Intrested</b-button>
         </div>
-        <div class="column is-offset-1 is-hidden-mobile">
+        <div class="column is-three-fifths is-hidden-mobile">
             <figure class="image header-image">
               <img src="../assets/img/headerimage.png">
             </figure>
@@ -172,8 +172,11 @@
 <section class="services">
   <div class="container">
     <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-5">Services we provide</h1>
-<div class="services-items">
-  <h2 class="mb-6">For employment</h2>
+      <div class="columns is-offset-one-fifth is-centered mt-6">
+      <div class="column is-one-third">
+      <h2>For employment</h2>
+      </div>
+      <div class="column is-half">
 <div class="service-item mb-6">
   <div class="service-name mb-2">
     <img class="" src="../assets/img/self-employment.svg" alt="Self employment">
@@ -212,10 +215,16 @@ Having the right qualification is a good start, but when it comes to employment 
 Are you familiar with the most popular search engines in Hungary? What other tools can you use to find the right workplace? You can count on us to help you navigate in the are of job search.</div>
 </div>
 
-<hr class="mt-5 mb-5">
+</div>
+</div>
 
-  <h2 class="mt-6 mb-6">To support studies and employment</h2>
+<hr class="mb-5">
 
+<div class="columns is-offset-one-fifth is-centered mt-6">
+      <div class="column is-one-third">
+  <h2>To support studies and employment</h2>
+     </div>
+      <div class="column is-half">
 <div class="service-item mb-6">
   <div class="service-name mb-2">
     <img class="" src="../assets/img/second-chance.svg" alt="Second-chance programs">
@@ -261,13 +270,13 @@ Advanced-level vocation trainings are usually organized by universities. The two
   <div class="service-desc mb-6">
 We organize language trainings for our beneficiaries in English, German, Spanish and other world languages. Foreign language proficiency can significantly increase your chances in the labor market. </div>
 </div>
-
-</div>
+  </div>
+    </div>
   </div>
 </section>
 <section class="testimonial">
   <div class="container">
-      <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-5">Testimonials</h1>
+      <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6">Testimonials</h1>
       <div class="testimonial-items columns">
 
 
