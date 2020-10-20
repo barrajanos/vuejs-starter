@@ -165,7 +165,7 @@
             <div class="contact">
               <div class="name">Melinda Vajda</div>
               <div class="title">Our employment coordinator in Hungary</div>
-              <a href="" class="email">mvajda@romaeducationfund.org</a>
+              <a href="mailto:mvajda@romaeducationfund.org" subject="Empyr - Information" class="email">mvajda@romaeducationfund.org</a>
             </div>
       </div>
       <div class="column is-one-third">
@@ -353,7 +353,7 @@ We organize language trainings for our beneficiaries in English, German, Spanish
   <div class="column is-4">
     <h3 class="is-size-5 has-text-weight-bold">Visit us at</h3>
     <p>1139 Budapest, Váci út 99.</p>
-    <a href="">
+    <a href="https://www.google.com/maps/dir//Budapest,+V%C3%A1ci+%C3%BAt+99,+1139/@47.5401294,19.0682121,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4741dbc3bf1ad84f:0xb82a173c4b2f049e!2m2!1d19.0704008!2d47.5401294">
                           <img
                           src="../assets/img/navigation.svg"
                           alt="Direction"
@@ -372,30 +372,30 @@ feel free to contact us</p>
                       >
                       <span>Send message</span>
       </a>
-          <a href="">
+          <a href="tel:06307926450">
                           <img
                           src="../assets/img/tel.svg"
                           alt="Telephone"
                       >
-                      <span>06 30 792 64 70</span>
+                      <span>06 30 792 64 50</span>
       </a>
-                <a href="">
+                <a href="mailto:info@romaeducationfund.org" subject="Empyr - Information">
                           <img
                           src="../assets/img/email.svg"
                           alt="E-mail"
                       >
-                      <span>info@ref.com</span>
+                      <span>info@romaeducationfund.org</span>
       </a>
   </div>
     <div class="column is-4">
         <h3 class="is-size-5 has-text-weight-bold">We are made possible by</h3>
-                        <a href="#" class="mr-5">
+                        <a href="https://www.romaeducationfund.org/" class="mr-5">
                     <img
                           src="../assets/img/romaeducationfund.png"
                           alt="Roma Education Fund"
                       >
         </a>
-                <a href="#" class="mr-5">
+                <a href="https://veluxfoundations.dk/en" class="mr-5">
                     <img
                           src="../assets/img/velux.png"
                           alt="Velux"
@@ -409,27 +409,27 @@ feel free to contact us</p>
   <div class="container">
     <h3 class="mb-5">Connect with us</h3>
     <div class="social">
-        <a href="#" class="mr-5">
+        <a href="https://www.facebook.com/RomaEducationFund/" class="mr-5">
                     <img
                           src="../assets/img/fb.svg"
-                          alt="Empyr"
+                          alt="Facebook"
                       >
         </a>
-        <a href="#">
+        <a href="https://twitter.com/romaeducation">
                     <img
                           src="../assets/img/twitter.svg"
-                          alt="Empyr"
+                          alt="Twitter"
                       >
         </a>
-        <a href="#" class="ml-5">
+        <a href="https://www.instagram.com/roma_education_fund/" class="ml-5">
                     <img
                           src="../assets/img/instagram.svg"
-                          alt="Empyr"
+                          alt="Instagram"
                       >
         </a>
     </div>
     <hr>
-    <a href="">Privacy Policy</a>
+    <a href="#" @click="alertPrivacy">Privacy Policy</a>
   </div>
 </section>
 </div>
@@ -458,8 +458,15 @@ export default {
           this.fields.logo_desc = document.data.logo_desc;
           this.fields.language_selector = document.data.language_selector;
         })
-    }
-  },
+    },
+  alertPrivacy() {
+                this.$buefy.dialog.alert({
+                    title: 'Privacy policy',
+                    message: 'Your data is important to us. This site allows us to access your current skills and see where we can help you with improvements. This is not a career site. We use the data you provide us to match you to training opportunities and possible employment networks. Your data is handled by a person with the utmost care, privacy and diligence. If you have any questions about our data policy please contact.',
+                    confirmText: 'Close'
+                })
+            }
+            },
   created () {
     this.getContent();
   }
