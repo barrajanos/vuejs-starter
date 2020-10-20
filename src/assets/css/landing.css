@@ -328,3 +328,62 @@ margin-top: 20px;
   background-color: #101928;
   color: #FFFFFF;
 }
+
+.dialog .button  {
+  border-radius: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ko .radio.button {
+  font-size: 22px !important;
+line-height: 28px !important;
+background: #FFFFFF;
+border: 1px solid rgba(65, 65, 65, 0.3);
+color: #414141;
+opacity: 0.6;
+filter: drop-shadow(0px 4px 20px rgba(16, 25, 40, 0.1));
+
+}
+
+.ko .radio.button.is-success {
+  background: linear-gradient(0deg, #F4FCF7, #F4FCF7), #FFFFFF;
+border: 1.5px solid #1ABE67;
+font-style: normal;
+font-weight: 700;
+font-size: 22px !important;
+line-height: 28px !important;
+color: #1ABE67 !important;
+opacity: 1;
+}
+
+.ko .radio.button.is-danger {
+  background: #FFFFFF !important;  
+  border: 1.5px solid #D51F2D !important;
+  font-weight: 700 !important;
+font-size: 22px !important;
+line-height: 26px !important;
+font-size: 18px;
+color: #D51F2D !important;
+opacity: 1;
+}
+
+.ko .radio.button.is-success:focus, .button.is-success.is-focused {
+  border: 1.5px solid #1ABE67 !important;
+  opacity: 1;
+}
+.ko .radio.button.is-success:hover {
+  border: 1.5px solid #1ABE67 !important;
+  opacity: 1;
+}
+
+.ko .radio.button.is-danger:focus, .button.is-danger.is-focused {
+  background: #FFFFFF !important;  
+  border: 1.5px solid #D51F2D !important;
+  opacity: 1;
+}
+.ko .radio.button.is-danger:hover {
+  background: #FFFFFF !important;  
+  border: 1.5px solid #D51F2D !important;
+  opacity: 1;
+}

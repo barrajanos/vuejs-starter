@@ -53,7 +53,7 @@
       <div class="levels columns is-vcentered">
         <div class="column is-one-third title">
             <h1 class="title is-size-2">
-              <p>We aim to help you get the skills you need and find employment!</p>
+              <p><prismic-rich-text :field="fields.header_title"/></p>
             </h1>
               <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'">Intrested</b-button>
         </div>
@@ -100,7 +100,7 @@
     </div>
               <div class="error-message mb-4"  v-show="radioRoma === 'no'">
       <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
-      <div class="mt-2"><a href="#">Learn more about our work</a></div>
+      <div class="mt-2"><a href="https://www.romaeducationfund.org/" target="_blank">Learn more about our work</a></div>
       </div>
 
         <div class="level koitem is-vcentered">
@@ -134,7 +134,7 @@
     </div>
           <div class="error-message" v-show="radioLive === 'no'">
       <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
-      <div class="mt-1">In case you would like us to let you know when our program becomes available in your county, tell us your email address.</div>
+      <div class="mt-1">In case you would like us to let you know when our program becomes available in your county, <a @click="promptNumber">tell us your email address.</a></div>
       </div>
   </div>
     <hr>
@@ -438,6 +438,10 @@ feel free to contact us</p>
 
 
 <script>
+
+const language = 'en-Us';
+
+
 export default {
   data () {
     return {
@@ -452,7 +456,7 @@ export default {
   },
   methods: {
     getContent () {
-      this.$prismic.client.getSingle('landing_layout')
+      this.$prismic.client.getSingle('landing_layout', { lang : language })
         .then((document) => {
           this.fields.header_title = document.data.header_title;
           this.fields.logo_desc = document.data.logo_desc;
@@ -465,10 +469,25 @@ export default {
                     message: 'Your data is important to us. This site allows us to access your current skills and see where we can help you with improvements. This is not a career site. We use the data you provide us to match you to training opportunities and possible employment networks. Your data is handled by a person with the utmost care, privacy and diligence. If you have any questions about our data policy please contact.',
                     confirmText: 'Close'
                 })
-            }
             },
+  promptNumber() {
+            this.$buefy.dialog.prompt({
+                message: `What's your e-mail address?`,
+                inputAttrs: {
+                    type: 'email',
+                    placeholder: '',
+                    value: '',
+                    confirmText: 'Send'
+                },
+                trapFocus: true,
+                onConfirm: (value) => this.$buefy.toast.open(`Thank you for your subscribe!`)
+            })
+            }
+        },
   created () {
     this.getContent();
   }
 };
+
+
 </script>
