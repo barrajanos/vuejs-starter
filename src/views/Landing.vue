@@ -14,7 +14,7 @@
                   </a>
                 </div>
                 <div class="level-item">
-                <p class="logodesc">Shaping Academic and Employment Skills for Young Roma</p>
+                <p class="logodesc"><prismic-rich-text :field="fields.logo_desc"/></p>
                 </div>
                 <div class="level-item">
           <b-dropdown class="language-selector" v-model="isPublic" aria-role="list">
@@ -55,7 +55,7 @@
             <h1 class="title is-size-2">
               <p><prismic-rich-text :field="fields.header_title"/></p>
             </h1>
-              <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'">Intrested</b-button>
+              <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'"><prismic-rich-text :field="fields.header_button_text"/></b-button>
         </div>
         <div class="column is-three-fifths is-hidden-mobile">
             <figure class="image header-image">
@@ -70,7 +70,7 @@
 <div class="container">
   <div class="columns is-centered">
     <div class="column is-half">
-        <h3 class="has-text-centered is-size-4">Please respond to these statements to help us find out whether we can support you
+        <h3 class="has-text-centered is-size-4"><prismic-rich-text :field="fields.ko_header_title"/>
       </h3>
   </div>
 </div>
@@ -439,7 +439,7 @@ feel free to contact us</p>
 
 <script>
 
-const language = 'en-Us';
+const language = 'hu';
 
 
 export default {
@@ -448,7 +448,10 @@ export default {
       fields: {
         header_title: null,
         logo_desc: null,
-        language_selector: null
+        language_selector: null,
+        header_button_text: null,
+        ko_header_title: null,
+        subscribe: null
       },
       radioRoma: '',
       radioLive: ''
@@ -461,6 +464,9 @@ export default {
           this.fields.header_title = document.data.header_title;
           this.fields.logo_desc = document.data.logo_desc;
           this.fields.language_selector = document.data.language_selector;
+          this.fields.header_button_text = document.data.header_button_text;
+          this.fields.ko_header_title = document.data.ko_header_title;
+          this.fields.subscribe = document.data.subscribe;
         })
     },
   alertPrivacy() {
