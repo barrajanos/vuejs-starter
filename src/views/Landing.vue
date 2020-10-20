@@ -21,12 +21,19 @@
               <button class="button is-primary" type="button" slot="trigger">
                   <template>
                       <b-icon icon="earth"></b-icon>
-                      <span>EN</span>
+                      {{ nowlanguage }}
                   </template>
                   <b-icon icon="menu-down"></b-icon>
-              </button>
+              </button> 
+              <b-dropdown-item @click="getContent('hu')" aria-role="listitem">
+                  <div class="media">
+                      <div class="media-content">
+                          <h3>HU - Magyar</h3>
+                      </div>
+                  </div>
+              </b-dropdown-item>
 
-              <b-dropdown-item :value="true" aria-role="listitem">
+              <b-dropdown-item @click="getContent('ro')" aria-role="listitem">
                   <div class="media">
                       <div class="media-content">
                           <h3>RO - Román</h3>
@@ -34,7 +41,7 @@
                   </div>
               </b-dropdown-item>
 
-              <b-dropdown-item :value="false" aria-role="listitem">
+              <b-dropdown-item @click="getContent('sk')" aria-role="listitem">
                   <div class="media">
                       <div class="media-content">
                           <h3>SK - Szlovák</h3>
@@ -134,21 +141,20 @@
     </div>
           <div class="error-message" v-show="radioLive === 'no'">
       <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
-      <div class="mt-1">In case you would like us to let you know when our program becomes available in your county, <a @click="promptNumber">tell us your email address.</a></div>
+      <div class="mt-1">In case you would like us to let you know when our program becomes available in your county, tell us your email address.</div>
+      <div><a @click="promptNumber"><prismic-rich-text :field="fields.subscribe"/></a></div>
       </div>
   </div>
     <hr>
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <div class="good" v-if="radioLive === 'yes' & radioRoma === 'yes' ">
-                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10">Let’s get started</b-button>
+                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10"><prismic-rich-text :field="fields.application_button_text"/></b-button>
         </div>
        <div class="notgood" v-else>
-                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled>Let’s get started</b-button>
+                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled><prismic-rich-text :field="fields.application_button_text"/></b-button>
         </div>
-
-
-              <p class="mt-3"><b-icon icon="clock-time-one-outline" size="is-small"></b-icon> It takes only <strong>5 minutes</strong></p>
+              <p class="mt-3 how-long"><b-icon icon="clock-time-one-outline" size="is-small"></b-icon><prismic-rich-text :field="fields.how_long_it_takes_"/></p>
               </div>
     </div>
   </div>
@@ -160,25 +166,25 @@
     <div class="columns is-vcentered">
       <div class="column is-two-fifths">
             <figure class="image contact-image mb-4">
-              <img src="../assets/img/coordinator.png">
+                  <prismic-image :field="fields.project_and_team_image"/>
             </figure>
             <div class="contact">
-              <div class="name">Melinda Vajda</div>
-              <div class="title">Our employment coordinator in Hungary</div>
-              <a href="mailto:mvajda@romaeducationfund.org" subject="Empyr - Information" class="email">mvajda@romaeducationfund.org</a>
+              <div class="name"><prismic-rich-text :field="fields.team_name"/></div>
+              <div class="title"><prismic-rich-text :field="fields.team_desc"/></div>
+              <a :href="'mailto:'+ fields.team_email[0]" subject="Empyr - Information" class="email"><prismic-rich-text :field="fields.team_email"/></a>
             </div>
       </div>
       <div class="column is-one-third">
-            <h1 class="is-size-3 has-text-weight-bold">What is EMPYR?</h1>
-            <div class="mt-3">EMPYR is part of Roma Education Fund’s SHAPYR program. Besides other activities we support young adults in their preparations for employment. The name itself is an acronym: EMP refers to employment while YR stands for young Roma. The project is supported by the Velux Foundations. Our services are completely free for you.</div>
-            <div class="mt-5"><strong>If you are interested, <a href="" v-scroll-to="'#ko-scroll'"> register</a> and our colleague will reach out to you soon.</strong></div>
+            <h1 class="is-size-3 has-text-weight-bold"><prismic-rich-text :field="fields.about_the_project_title"/></h1>
+            <div class="mt-5"><prismic-rich-text :field="fields.about_the_project_description"/></div>
+            
       </div>
     </div>
   </div>
 </section>
 <section class="services">
   <div class="container">
-    <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6">Services we provide</h1>
+    <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.services_headline"/></h1>
       <div class="columns is-offset-one-fifth is-centered mt-6">
       <div class="column is-one-third">
       <h2>For employment</h2>
@@ -283,9 +289,8 @@ We organize language trainings for our beneficiaries in English, German, Spanish
 </section>
 <section class="testimonial">
   <div class="container">
-      <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6">Testimonials</h1>
+      <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.testimonials_title"/></h1>
       <div class="testimonial-items columns">
-
 
         <div class="testimonial-item column is-half">
           <div class="card">
@@ -439,9 +444,6 @@ feel free to contact us</p>
 
 <script>
 
-const language = 'hu';
-
-
 export default {
   data () {
     return {
@@ -451,14 +453,38 @@ export default {
         language_selector: null,
         header_button_text: null,
         ko_header_title: null,
-        subscribe: null
+        subscribe: null,
+        application_button_text: null,
+        how_long_it_takes_: null,
+        about_the_project_title: null,
+        about_the_project_description: null,
+        project_and_team_image: null,
+        team_name: null,
+        team_desc: null,
+        team_email: null,
+        services_headline: null,
+        services_lead: null,
+        services_second_headline: null,
+        testimonials_title: null,
+        office_title: null,
+        office_desc: null,
+        office_link: null,
+        contact_us_title: null,
+        contact_us_desc: null,
+        contact_messenger_link: null,
+        contact_telephone_link: null,
+        contact_email_link: null,
+        logos: null,
+        footer_social_media_title: null,
+        footer_privacy_policy_link: null,
       },
+      nowlanguage: 'sokk',
       radioRoma: '',
-      radioLive: ''
+      radioLive: '',
     };
   },
   methods: {
-    getContent () {
+    getContent (language) {
       this.$prismic.client.getSingle('landing_layout', { lang : language })
         .then((document) => {
           this.fields.header_title = document.data.header_title;
@@ -467,6 +493,29 @@ export default {
           this.fields.header_button_text = document.data.header_button_text;
           this.fields.ko_header_title = document.data.ko_header_title;
           this.fields.subscribe = document.data.subscribe;
+          this.fields.application_button_text = document.data.application_button_text;
+          this.fields.how_long_it_takes_ = document.data.how_long_it_takes_;
+          this.fields.about_the_project_title = document.data.about_the_project_title;
+          this.fields.about_the_project_description = document.data.about_the_project_description;
+          this.fields.project_and_team_image = document.data.project_and_team_image;
+          this.fields.team_name = document.data.team_name;
+          this.fields.team_desc = document.data.team_desc;
+          this.fields.team_email = document.data.team_email;
+          this.fields.services_headline = document.data.services_headline;
+          this.fields.services_lead = document.data.services_lead;
+          this.fields.services_second_headline = document.data.services_second_headline;
+          this.fields.testimonials_title = document.data.testimonials_title;
+          this.fields.office_title = document.data.office_title;
+          this.fields.office_desc = document.data.office_desc;
+          this.fields.office_link = document.data.office_link;
+          this.fields.contact_us_title = document.data.contact_us_title;
+          this.fields.contact_us_desc = document.data.contact_us_desc;
+          this.fields.contact_messenger_link = document.data.contact_messenger_link;
+          this.fields.contact_telephone_link = document.data.contact_telephone_link;
+          this.fields.contact_email_link = document.data.contact_email_link;
+          this.nowlanguage = document.lang;
+                console.log(this.nowlanguage);
+
         })
     },
   alertPrivacy() {

@@ -53,6 +53,7 @@
 .language-selector button {
  background-color: transparent !important;
  color: #101928 !important;
+ text-transform: uppercase;
 }
 
 .language-selector button.is-active {
@@ -386,4 +387,9 @@ opacity: 1;
   background: #FFFFFF !important;  
   border: 1.5px solid #D51F2D !important;
   opacity: 1;
+}
+
+.how-long {
+  display: -webkit-inline-box;
+  vertical-align: middle;
 }
