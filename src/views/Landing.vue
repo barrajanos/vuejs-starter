@@ -429,7 +429,7 @@ feel free to contact us</p>
         </a>
     </div>
     <hr>
-    <a href="#" @click="alertPrivacy">Privacy Policy</a>
+    <a @click="alertPrivacy">Privacy Policy</a>
   </div>
 </section>
 </div>
