@@ -299,6 +299,11 @@ color: #101928;
   box-shadow: 0px 12px 28px rgba(43, 102, 160, 0.15);
 border-radius: 16px;
 padding: 40px;
+min-height: 360px;
+}
+
+.testimonial-item .image img {
+  border-radius: 50%;
 }
 
 .prefooter {
@@ -411,4 +416,10 @@ opacity: 1;
 .how-long {
   display: -webkit-inline-box;
   vertical-align: middle;
+}
+
+.section-title-size h2, .section-title-size h1 {
+  font-weight: 700 !important;
+    font-size: 32px !important;
+    color: #101928;
 }

@@ -166,7 +166,7 @@
             </div>
       </div>
       <div class="column is-one-third">
-            <h1 class="is-size-3 has-text-weight-bold"><prismic-rich-text :field="fields.about_the_project_title"/></h1>
+            <h1 class="section-title-size is-size-3 has-text-weight-bold"><prismic-rich-text :field="fields.about_the_project_title"/></h1>
             <div class="mt-5"><prismic-rich-text :field="fields.about_the_project_description"/></div>
             
       </div>
@@ -175,7 +175,7 @@
 </section>
 <section class="services">
   <div class="container">
-    <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.services_headline"/></h1>
+    <h1 class="section-title-size is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.services_headline"/></h1>
       <div class="columns is-offset-one-fifth is-centered mt-6">
       <div class="column is-one-third">
       <h2>For employment</h2>
@@ -280,7 +280,7 @@ We organize language trainings for our beneficiaries in English, German, Spanish
 </section>
 <section class="testimonial">
   <div class="container">
-      <h1 class="is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.testimonials_title"/></h1>
+      <h1 class="section-title-size is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.testimonials_title"/></h1>
       <div class="testimonial-items columns">
 
         <div class="testimonial-item column is-half">
@@ -291,10 +291,10 @@ We organize language trainings for our beneficiaries in English, German, Spanish
                           alt="Testimonial icon"
                       >
                    <p class="title mt-5">
-    SHAPYR provides regular trainings, which I think is very important.
+    <prismic-rich-text :field="fields.testimonials_items[0].testimonials_lead"/>
     </p>
      <p class="subtitle">
-      I will be 20 years old and I am currently a student of the Ganz Ábrahám Bilingual Secondary Vocational School.
+         <prismic-rich-text :field="fields.testimonials_items[0].testimonials_desc"/>
     </p>
               <div class="media levels is-vcentered">
                 <div class="level">
@@ -304,7 +304,7 @@ We organize language trainings for our beneficiaries in English, German, Spanish
                   </figure>
                 </div>
                 <div class="media-content">
-                  <p class="name is-4">Oszkár Balogh</p>
+                  <p class="name is-4"><prismic-rich-text :field="fields.testimonials_items[0].name"/></p>
                 </div>
                 </div>
     </div>
@@ -312,7 +312,7 @@ We organize language trainings for our beneficiaries in English, German, Spanish
 </div>
         </div>
 
-                <div class="testimonial-item column is-half">
+                       <div class="testimonial-item column is-half">
           <div class="card">
               <div class="card-content">
                       <img
@@ -320,20 +320,20 @@ We organize language trainings for our beneficiaries in English, German, Spanish
                           alt="Testimonial icon"
                       >
                    <p class="title mt-5">
-    SHAPYR provides regular trainings, which I think is very important.
+    <prismic-rich-text :field="fields.testimonials_items[1].testimonials_lead"/>
     </p>
      <p class="subtitle">
-      I will be 20 years old and I am currently a student of the Ganz Ábrahám Bilingual Secondary Vocational School.
+         <prismic-rich-text :field="fields.testimonials_items[1].testimonials_desc"/>
     </p>
               <div class="media levels is-vcentered">
                 <div class="level">
                 <div class="media-left">
                   <figure class="image is-48x48">
-                    <img src="../assets/img/test-image.png" alt="Placeholder image">
+                    <prismic-image :field="fields.testimonials_items[1].image"/>
                   </figure>
                 </div>
                 <div class="media-content">
-                  <p class="name is-4">Oszkár Balogh</p>
+                  <p class="name is-4"><prismic-rich-text :field="fields.testimonials_items[1].name"/></p>
                 </div>
                 </div>
     </div>
@@ -347,7 +347,7 @@ We organize language trainings for our beneficiaries in English, German, Spanish
   <div class="container">
 <div class="columns">
   <div class="column is-4">
-    <h3 class="is-size-5 has-text-weight-bold">Visit us at</h3>
+    <h3 class="is-size-5 has-text-weight-bold"><prismic-rich-text :field="fields.office_title"/></h3>
     <p>1139 Budapest, Váci út 99.</p>
     <a href="https://www.google.com/maps/dir//Budapest,+V%C3%A1ci+%C3%BAt+99,+1139/@47.5401294,19.0682121,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4741dbc3bf1ad84f:0xb82a173c4b2f049e!2m2!1d19.0704008!2d47.5401294">
                           <img
@@ -459,6 +459,7 @@ export default {
         services_lead: null,
         services_second_headline: null,
         testimonials_title: null,
+        testimonials_items: null,
         office_title: null,
         office_desc: null,
         office_link: null,
@@ -500,6 +501,7 @@ export default {
           this.fields.services_lead = document.data.services_lead;
           this.fields.services_second_headline = document.data.services_second_headline;
           this.fields.testimonials_title = document.data.testimonials_title;
+          this.fields.testimonials_items = document.data.testimonials_items;
           this.fields.office_title = document.data.office_title;
           this.fields.office_desc = document.data.office_desc;
           this.fields.office_link = document.data.office_link;
@@ -509,8 +511,6 @@ export default {
           this.fields.contact_telephone_link = document.data.contact_telephone_link;
           this.fields.contact_email_link = document.data.contact_email_link;
           this.nowlanguage = document.lang;
-                console.log(this.nowlanguage);
-
         })
     },
   alertPrivacy() {
@@ -530,7 +530,7 @@ export default {
                     confirmText: 'Send'
                 },
                 trapFocus: true,
-                onConfirm: (value) => this.$buefy.toast.open(fields.thank_you_for_your_subscribe)
+                onConfirm: (value) => this.$buefy.toast.open('Thank you!')
             })
             }
         },
