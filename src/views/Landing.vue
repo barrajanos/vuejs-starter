@@ -58,13 +58,13 @@
     <div class="container">
       
       <div class="levels columns is-vcentered">
-        <div class="column is-one-third title">
+        <div class="column is-two-fifths title">
             <h1 class="title is-size-2">
               <p><prismic-rich-text :field="fields.header_title"/></p>
             </h1>
               <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'"><prismic-rich-text :field="fields.header_button_text"/></b-button>
         </div>
-        <div class="column is-three-fifths is-hidden-mobile">
+        <div class="column is-half is-hidden-mobile">
             <figure class="image header-image">
               <img src="../assets/img/headerimage.png">
             </figure>
