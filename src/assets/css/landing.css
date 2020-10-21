@@ -444,6 +444,14 @@ opacity: 1;
     right: 0px !important;
     top: 10px !important;
   }
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+  .whatis {
+    padding-top: 30px !important;
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -459,6 +467,7 @@ opacity: 1;
 
 .ko {
   padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .ko-items .lelvel-left p {
@@ -516,10 +525,22 @@ opacity: 1;
 }
 
 .prefooter {
+  padding-top: 60px !important;
+  padding-left:  20px !important;
+  padding-right:  20px !important;
+  padding-bottom: 30px !important;
+}
+
+.whatis {
   padding-top: 30px !important;
   padding-left:  20px !important;
   padding-right:  20px !important;
   padding-bottom: 30px !important;
+}
+
+.whatis .image {
+  max-width: 200px; 
+  max-height: 200px; 
 }
 
 }

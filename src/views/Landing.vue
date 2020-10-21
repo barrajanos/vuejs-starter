@@ -153,7 +153,7 @@
 </section>
 <section class="whatis">
   <div class="container">
-    <div class="columns is-vcentered">
+    <div class="columns is-vcentered reverse-columns">
       <div class="column is-two-fifths">
             <figure class="image contact-image mb-4">
                   <prismic-image :field="fields.project_and_team_image"/>
@@ -198,11 +198,11 @@
 
 <hr class="mb-5">
 
-<div class="columns is-offset-one-fifth is-centered mt-6">
+<div class="columns is-offset-one-fifth is-centered mt-6 is-full-touch">
       <div class="column is-one-third">
   <h2>{{ $prismic.richTextAsPlain(fields.services_second_headline) }}</h2>
      </div>
-      <div class="column is-half">
+      <div class="column is-half is-full-touch">
 
 
 <div v-for="(item, index) in fields.services_group" :key="'service-item-' + index" class="service-item mb-6">
