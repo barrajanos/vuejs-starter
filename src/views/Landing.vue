@@ -144,7 +144,7 @@
        <div class="notgood" v-else>
                     <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled>{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
         </div>
-              <p class="mt-3 how-long"><b-icon icon="clock-time-one-outline" size="is-small"></b-icon><prismic-rich-text :field="fields.how_long_it_takes_"/></p>
+              <p class="mt-3 how-long"><b-icon class="is-hidden-mobile" icon="clock-time-one-outline" size="is-small"></b-icon><prismic-rich-text :field="fields.how_long_it_takes_"/></p>
               </div>
     </div>
   </div>
