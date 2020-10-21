@@ -161,7 +161,7 @@
             <div class="contact">
               <div class="name"><prismic-rich-text :field="fields.team_name"/></div>
               <div class="title"><prismic-rich-text :field="fields.team_desc"/></div>
-              <a :href="'mailto:'+ fields.team_email[0]" subject="Empyr - Information" class="email"><prismic-rich-text :field="fields.team_email"/></a>
+              <a :href="premail + $prismic.richTextAsPlain(fields.team_email)" subject="Empyr - Information" class="email"><prismic-rich-text :field="fields.team_email"/></a>
             </div>
       </div>
       <div class="column is-one-third">
@@ -309,14 +309,14 @@
                       >
                       <span>{{ $prismic.richTextAsPlain(fields.contact_messenger_link) }}</span>
       </a>
-          <a href="tel:06307926450">
+          <a :href="pretel + $prismic.richTextAsPlain(fields.contact_telephone_link)">
                           <img
                           src="../assets/img/tel.svg"
                           alt="Telephone"
                       >
                       <span>{{ $prismic.richTextAsPlain(fields.contact_telephone_link) }}</span>
       </a>
-                <a href="mailto:info@romaeducationfund.org" subject="Empyr - Information">
+                <a :href="premail + $prismic.richTextAsPlain(fields.contact_email_link)" subject="Empyr - Information">
                           <img
                           src="../assets/img/email.svg"
                           alt="E-mail"
@@ -418,6 +418,8 @@ export default {
       nowlanguage: 'sokk',
       radioRoma: '',
       radioLive: '',
+      premail: 'mailto:',
+      pretel: 'tel:',
     };
   },
   methods: {
