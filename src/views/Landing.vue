@@ -75,7 +75,7 @@
 <div class="container">
   <div class="columns is-centered">
     <div class="column is-half">
-        <h3 class="has-text-centered is-size-4"><prismic-rich-text :field="fields.ko_header_title"/>
+        <h3 class="has-text-centered is-size-4-desktop is-size-5-touch">{{ $prismic.richTextAsPlain(fields.ko_header_title) }}
       </h3>
   </div>
 </div>
@@ -84,7 +84,8 @@
   <div class="ko-items">
     <div class="level koitem is-vcentered">
       <div class="lelvel-left">
-        <p class="ko-text is-size-4"><prismic-rich-text :field="fields.ko[0].ko_title"/></p>
+        <p class="ko-text is-size-4-desktop is-size-5-touch"><prismic-rich-text :field="fields.ko[0].ko_title"/>
+        </p>
       </div>
       <div class="level-right">
           <b-field>
