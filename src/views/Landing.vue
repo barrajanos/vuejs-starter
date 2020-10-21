@@ -347,44 +347,43 @@ We organize language trainings for our beneficiaries in English, German, Spanish
   <div class="container">
 <div class="columns">
   <div class="column is-4">
-    <h3 class="is-size-5 has-text-weight-bold"><prismic-rich-text :field="fields.office_title"/></h3>
-    <p>1139 Budapest, Váci út 99.</p>
+    <h3 class="is-size-5 has-text-weight-bold">{{ $prismic.richTextAsPlain(fields.office_title) }}</h3>
+    <p>{{ $prismic.richTextAsPlain(fields.office_desc) }}</p>
     <a href="https://www.google.com/maps/dir//Budapest,+V%C3%A1ci+%C3%BAt+99,+1139/@47.5401294,19.0682121,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4741dbc3bf1ad84f:0xb82a173c4b2f049e!2m2!1d19.0704008!2d47.5401294">
                           <img
                           src="../assets/img/navigation.svg"
                           alt="Direction"
                       >
-                      <span>Directions</span>
+                      <span>{{ $prismic.richTextAsPlain(fields.office_link) }}</span>
       </a>
   </div>
     <div class="column is-4">
-        <h3 class="is-size-5 has-text-weight-bold">Contact us</h3>
-        <p>Should you have any questions, 
-feel free to contact us</p>
+        <h3 class="is-size-5 has-text-weight-bold">{{ $prismic.richTextAsPlain(fields.contact_us_title) }}</h3>
+        <p>{{ $prismic.richTextAsPlain(fields.contact_us_desc) }}</p>
     <a href="">
                           <img
                           src="../assets/img/messenger.svg"
                           alt="Send message"
                       >
-                      <span>Send message</span>
+                      <span>{{ $prismic.richTextAsPlain(fields.contact_messenger_link) }}</span>
       </a>
           <a href="tel:06307926450">
                           <img
                           src="../assets/img/tel.svg"
                           alt="Telephone"
                       >
-                      <span>06 30 792 64 50</span>
+                      <span>{{ $prismic.richTextAsPlain(fields.contact_telephone_link) }}</span>
       </a>
                 <a href="mailto:info@romaeducationfund.org" subject="Empyr - Information">
                           <img
                           src="../assets/img/email.svg"
                           alt="E-mail"
                       >
-                      <span>info@romaeducationfund.org</span>
+                      <span>{{ $prismic.richTextAsPlain(fields.contact_email_link) }}</span>
       </a>
   </div>
     <div class="column is-4">
-        <h3 class="is-size-5 has-text-weight-bold">We are made possible by</h3>
+        <h3 class="is-size-5 has-text-weight-bold">{{ $prismic.richTextAsPlain(fields.logos) }}</h3>
                         <a href="https://www.romaeducationfund.org/" class="mr-5">
                     <img
                           src="../assets/img/romaeducationfund.png"
@@ -403,7 +402,7 @@ feel free to contact us</p>
 </section>
 <section class="footer has-text-centered">
   <div class="container">
-    <h3 class="mb-5">Connect with us</h3>
+    <h3 class="mb-5">{{ $prismic.richTextAsPlain(fields.footer_social_media_title) }}</h3>
     <div class="social">
         <a href="https://www.facebook.com/RomaEducationFund/" class="mr-5">
                     <img
@@ -425,7 +424,7 @@ feel free to contact us</p>
         </a>
     </div>
     <hr>
-    <a @click="alertPrivacy">Privacy Policy</a>
+    <a @click="alertPrivacy">{{ $prismic.richTextAsPlain(fields.footer_privacy_policy_link) }}</a>
   </div>
 </section>
 </div>
@@ -510,6 +509,9 @@ export default {
           this.fields.contact_messenger_link = document.data.contact_messenger_link;
           this.fields.contact_telephone_link = document.data.contact_telephone_link;
           this.fields.contact_email_link = document.data.contact_email_link;
+          this.fields.footer_social_media_title = document.data.footer_social_media_title;
+          this.fields.footer_privacy_policy_link = document.data.footer_privacy_policy_link;
+          this.fields.logos = document.data.logos;
           this.nowlanguage = document.lang;
         })
     },
