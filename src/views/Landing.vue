@@ -28,7 +28,7 @@
               <b-dropdown-item @click="getContent('hu')" aria-role="listitem">
                   <div class="media">
                       <div class="media-content">
-                          <h3>HU - Magyar</h3>
+                          <h3>HU - Magyarország</h3>
                       </div>
                   </div>
               </b-dropdown-item>
@@ -36,7 +36,7 @@
               <b-dropdown-item @click="getContent('ro')" aria-role="listitem">
                   <div class="media">
                       <div class="media-content">
-                          <h3>RO - Román</h3>
+                          <h3>RO - România</h3>
                       </div>
                   </div>
               </b-dropdown-item>
@@ -44,7 +44,7 @@
               <b-dropdown-item @click="getContent('sk')" aria-role="listitem">
                   <div class="media">
                       <div class="media-content">
-                          <h3>SK - Szlovák</h3>
+                          <h3>SK - Slovenská republika</h3>
                       </div>
                   </div>
               </b-dropdown-item>
