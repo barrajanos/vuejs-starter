@@ -5,18 +5,17 @@
   <div class="container">
         <nav class="level">
           <div class="level-left">
-              <div class="level-item">
-                  <a href="#">
-                    <img
-                          src="../assets/img/empyrlogo.svg"
-                          alt="Empyr"
-                      >
-                  </a>
-                </div>
-                <div class="level-item">
-                <p class="logodesc"><prismic-rich-text :field="fields.logo_desc"/></p>
-                </div>
-                <div class="level-item">
+               
+                    <a href="#" class="logo">
+                      <img
+                            src="../assets/img/empyrlogo.svg"
+                            alt="Empyr"
+                        >
+                    </a>
+
+                  
+                  <p class="logodesc">{{ $prismic.richTextAsPlain(fields.logo_desc) }}</p>
+            
           <b-dropdown class="language-selector" v-model="isPublic" aria-role="list">
               <button class="button is-primary" type="button" slot="trigger">
                   <template>
@@ -49,7 +48,6 @@
                   </div>
               </b-dropdown-item>
           </b-dropdown>
-          </div>
         </div>
       </nav>
     </div>
