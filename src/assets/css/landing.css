@@ -505,14 +505,14 @@ opacity: 1;
 }
 
 .services {
-  padding-top: 30px !important;
+  padding-top: 10px !important;
   padding-left:  20px !important;
   padding-right:  20px !important;
   padding-bottom: 30px !important;
 }
 
 .testimonial {
-  padding-top: 30px !important;
+  padding-top: 50px !important;
   padding-bottom: 30px !important;
 }
 
@@ -532,7 +532,7 @@ opacity: 1;
 }
 
 .whatis {
-  padding-top: 30px !important;
+  padding-top: 40px !important;
   padding-left:  20px !important;
   padding-right:  20px !important;
   padding-bottom: 30px !important;
