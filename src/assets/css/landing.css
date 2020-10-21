@@ -462,7 +462,13 @@ opacity: 1;
 }
 
 .ko-items .lelvel-left p {
-  font-size: 0.5rem !important;
+  font-size: 18px !important;
+  font-weight: 700;
+}
+
+.hero-body .button {
+  display: flex;
+    width: 100%;
 }
 
 }
