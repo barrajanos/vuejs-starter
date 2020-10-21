@@ -140,10 +140,10 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <div class="good" v-if="radioLive === 'yes' & radioRoma === 'yes' ">
-                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10"><prismic-rich-text :field="fields.application_button_text"/></b-button>
+                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
         </div>
        <div class="notgood" v-else>
-                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled><prismic-rich-text :field="fields.application_button_text"/></b-button>
+                    <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled>{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
         </div>
               <p class="mt-3 how-long"><b-icon icon="clock-time-one-outline" size="is-small"></b-icon><prismic-rich-text :field="fields.how_long_it_takes_"/></p>
               </div>
@@ -178,7 +178,7 @@
     <h1 class="section-title-size is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.services_headline"/></h1>
       <div class="columns is-offset-one-fifth is-centered mt-6">
       <div class="column is-one-third">
-      <h2>For employment</h2>
+      <h2>{{ $prismic.richTextAsPlain(fields.services_lead) }}</h2>
       </div>
       <div class="column is-half">
 <div class="service-item mb-6">
@@ -226,7 +226,7 @@ Are you familiar with the most popular search engines in Hungary? What other too
 
 <div class="columns is-offset-one-fifth is-centered mt-6">
       <div class="column is-one-third">
-  <h2>To support studies and employment</h2>
+  <h2>{{ $prismic.richTextAsPlain(fields.services_second_headline) }}</h2>
      </div>
       <div class="column is-half">
 <div class="service-item mb-6">
@@ -456,7 +456,9 @@ export default {
         team_email: null,
         services_headline: null,
         services_lead: null,
+        services: null,
         services_second_headline: null,
+        services_group: null,
         testimonials_title: null,
         testimonials_items: null,
         office_title: null,
@@ -498,7 +500,9 @@ export default {
           this.fields.team_email = document.data.team_email;
           this.fields.services_headline = document.data.services_headline;
           this.fields.services_lead = document.data.services_lead;
+          this.fields.sevices = document.data.sevices;
           this.fields.services_second_headline = document.data.services_second_headline;
+          this.fields.services_group = document.data.services_group;
           this.fields.testimonials_title = document.data.testimonials_title;
           this.fields.testimonials_items = document.data.testimonials_items;
           this.fields.office_title = document.data.office_title;
