@@ -86,7 +86,7 @@
   <div class="ko-items">
     <div class="level koitem is-vcentered">
       <div class="lelvel-left">
-        <p class="ko-text is-size-4">I declare myself Roma.</p>
+        <p class="ko-text is-size-4"><prismic-rich-text :field="fields.ko[0].ko_title"/></p>
       </div>
       <div class="level-right">
           <b-field>
@@ -94,32 +94,24 @@
                   native-value="yes"
                   type="is-success"
                   size="is-large">
-                  <span>Yes</span>
+                  <span><prismic-rich-text :field="fields.ko[0].ko_true_button_text"/></span>
               </b-radio-button>
               <b-radio-button v-model="radioRoma"
                   native-value="no"
                   type="is-danger"
                   size="is-large">
-                  <span>No</span>
+                  <span><prismic-rich-text :field="fields.ko[0].ko_false_text"/></span>
               </b-radio-button>
           </b-field>
       </div>
     </div>
               <div class="error-message mb-4"  v-show="radioRoma === 'no'">
-      <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
-      <div class="mt-2"><a href="https://www.romaeducationfund.org/" target="_blank">Learn more about our work</a></div>
+      <div><prismic-rich-text :field="fields.ko[0].ko_error_message"/></div>
       </div>
 
         <div class="level koitem is-vcentered">
       <div class="lelvel-left">
-        <p class="ko-text"><span class="is-size-4">I live in:</span>
-                <ul class="is-size-5">
-          <li>- Budapest</li>
-          <li>- Pest county</li>
-          <li>- Borsod-Abaúj-Zemplén county</li>
-          <li>- Baranya county</li>
-          <li>- Szabolcs-Szatmár-Bereg county</li>
-                </ul></p>
+        <prismic-rich-text :field="fields.ko[1].ko_title"/>
       </div>
       <div class="level-right">
           <b-field>
@@ -127,21 +119,20 @@
                   native-value="yes"
                   type="is-success"
                   size="is-large">
-                  <span>Yes</span>
+                  <span><prismic-rich-text :field="fields.ko[1].ko_true_button_text"/></span>
               </b-radio-button>
               <b-radio-button v-model="radioLive"
                   native-value="no"
                   type="is-danger"
                   size="is-large"
                   >
-                  <span>No</span>
+                  <span><prismic-rich-text :field="fields.ko[1].ko_false_text"/></span>
               </b-radio-button>
           </b-field>
       </div>
     </div>
           <div class="error-message" v-show="radioLive === 'no'">
-      <div><strong>Unfortunately, you don't meet the requirements.</strong></div>
-      <div class="mt-1">In case you would like us to let you know when our program becomes available in your county, tell us your email address.</div>
+      <prismic-rich-text :field="fields.ko[1].ko_error_message"/>
       <div><a @click="promptNumber"><prismic-rich-text :field="fields.subscribe"/></a></div>
       </div>
   </div>
@@ -453,9 +444,11 @@ export default {
         language_selector: null,
         header_button_text: null,
         ko_header_title: null,
+        ko: null,
         subscribe: null,
         application_button_text: null,
         how_long_it_takes_: null,
+        thank_you_for_your_subscribe: null,
         about_the_project_title: null,
         about_the_project_description: null,
         project_and_team_image: null,
@@ -492,9 +485,11 @@ export default {
           this.fields.language_selector = document.data.language_selector;
           this.fields.header_button_text = document.data.header_button_text;
           this.fields.ko_header_title = document.data.ko_header_title;
+          this.fields.ko = document.data.ko;
           this.fields.subscribe = document.data.subscribe;
           this.fields.application_button_text = document.data.application_button_text;
           this.fields.how_long_it_takes_ = document.data.how_long_it_takes_;
+          this.fields.thank_you_for_your_subscribe = document.data.thank_you_for_your_subscribe;
           this.fields.about_the_project_title = document.data.about_the_project_title;
           this.fields.about_the_project_description = document.data.about_the_project_description;
           this.fields.project_and_team_image = document.data.project_and_team_image;
@@ -527,7 +522,7 @@ export default {
             },
   promptNumber() {
             this.$buefy.dialog.prompt({
-                message: `What's your e-mail address?`,
+                message: `E-mail`,
                 inputAttrs: {
                     type: 'email',
                     placeholder: '',
@@ -535,7 +530,7 @@ export default {
                     confirmText: 'Send'
                 },
                 trapFocus: true,
-                onConfirm: (value) => this.$buefy.toast.open(`Thank you for your subscribe!`)
+                onConfirm: (value) => this.$buefy.toast.open(fields.thank_you_for_your_subscribe)
             })
             }
         },

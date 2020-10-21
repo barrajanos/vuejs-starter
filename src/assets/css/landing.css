@@ -143,6 +143,8 @@ border-radius: 8px;
   color: #910642 !important;
   text-decoration: underline;
   font-weight: bold;
+  margin-top: 8px;
+    display: block;
 }
 
 .whatis .contact .name {
@@ -353,7 +355,10 @@ border: 1px solid rgba(65, 65, 65, 0.3);
 color: #414141;
 opacity: 0.6;
 filter: drop-shadow(0px 4px 20px rgba(16, 25, 40, 0.1));
+}
 
+.ko-items .lelvel-left p {
+  font-size: 1.5rem !important;
 }
 
 .ko .radio.button.is-success {
@@ -396,6 +401,11 @@ opacity: 1;
   background: #FFFFFF !important;  
   border: 1.5px solid #D51F2D !important;
   opacity: 1;
+}
+
+.ko ul {
+  list-style: square outside none;
+  margin-left: 20px;
 }
 
 .how-long {
