@@ -75,6 +75,7 @@
   color: #101928 !important;
   background: transparent !important;
   font-weight: bold;
+  margin-left: 12px;
 }
 
 .language-selector button {
@@ -107,7 +108,7 @@ a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, butto
 .image img {
  max-width: 531px !important;
   max-height: 100% !important;
-  width: auto !important;
+  width: 100% !important;
   text-align: right;
   float: right;
 }

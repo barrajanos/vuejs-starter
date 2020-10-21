@@ -55,14 +55,14 @@
   <div class="hero-body">
     <div class="container">
       
-      <div class="levels columns is-vcentered">
-        <div class="column is-two-fifths title">
-            <h1 class="title is-size-2">
-              <p><prismic-rich-text :field="fields.header_title"/></p>
+      <div class="levels columns is-vcentered has-text-centered-touch">
+        <div class="column is-two-fifths-desktop is-full-tablet title">
+            <h1 class="title is-size-2-widescreen is-size-3-desktop is-size-4-tablet is-size-5-mobile">
+              <p>{{ $prismic.richTextAsPlain(fields.header_title) }}</p>
             </h1>
-              <b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'"><prismic-rich-text :field="fields.header_button_text"/></b-button>
+            <span class="has-text-centered"><b-button type="is-dark" size="is-medium" icon-left="arrow-down" class="main-button" v-scroll-to="'#ko-scroll'">{{ $prismic.richTextAsPlain(fields.header_button_text) }}</b-button></span>
         </div>
-        <div class="column is-half is-hidden-mobile">
+        <div class="column is-half is-hidden-touch">
             <figure class="image header-image">
               <img src="../assets/img/headerimage.png">
             </figure>
