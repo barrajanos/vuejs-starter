@@ -176,10 +176,10 @@
   <div class="container">
     <h1 class="section-title-size is-size-3 has-text-weight-bold has-text-centered	mb-6"><prismic-rich-text :field="fields.services_headline"/></h1>
       <div class="columns is-offset-one-fifth is-centered mt-6">
-      <div class="column is-one-third">
+      <div class="column is-one-third-desktop is-full-touch">
       <h2>{{ $prismic.richTextAsPlain(fields.services_lead) }}</h2>
       </div>
-      <div class="column is-half">
+      <div class="column is-half-desktop is-full-touch">
 
 
 <div v-for="(item, index) in fields.services" :key="'service-item-' + index" class="service-item mb-6">

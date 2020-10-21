@@ -495,5 +495,31 @@ opacity: 1;
     width: 100%;
 }
 
+.services {
+  padding-top: 30px !important;
+  padding-left:  20px !important;
+  padding-right:  20px !important;
+  padding-bottom: 30px !important;
+}
+
+.testimonial {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.testimonial .card {
+  padding-top: 30px !important;
+  padding-left:  20px !important;
+  padding-right:  20px !important;
+  padding-bottom: 30px !important;
+  min-height: 0px;
+}
+
+.prefooter {
+  padding-top: 30px !important;
+  padding-left:  20px !important;
+  padding-right:  20px !important;
+  padding-bottom: 30px !important;
+}
 
 }
