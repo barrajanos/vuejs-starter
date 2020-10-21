@@ -67,6 +67,15 @@ a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, butto
 .button.is-dark {
   font-weight: bold !important;
 }
+.button.is-dark h6 {
+  font-weight: bold !important;
+  color:  #FFFFFF !important;
+}
+
+.button.is-dark h1 {
+  font-weight: bold !important;
+  color:  #FFFFFF !important;
+}
 
 .image img {
  max-width: 531px !important;
