@@ -490,4 +490,10 @@ opacity: 1;
   width: 50%;
 }
 
+.ko .button.red {
+  display: flex;
+    width: 100%;
+}
+
+
 }
