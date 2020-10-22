@@ -146,7 +146,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <div class="good" v-if="radioLive === 'yes' & radioRoma === 'yes' ">
-                    <b-button type="is-primary" onclick="window.location.href='#';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
+                    <b-button type="is-primary" onclick="window.location.href='https://empyr-arthanis.netlify.app/';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
         </div>
        <div class="notgood" v-else>
                     <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled>{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
