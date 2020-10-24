@@ -373,7 +373,7 @@
         </a>
     </div>
     <hr>
-    <a @click="alertPrivacy">{{ $prismic.richTextAsPlain(fields.footer_privacy_policy_link) }}</a>
+    <a @click="alertPrivacy($prismic.richTextAsPlain(fields.privacy_policy_title), $prismic.richTextAsPlain(fields.desc), $prismic.richTextAsPlain(fields.button_text))">{{ $prismic.richTextAsPlain(fields.footer_privacy_policy_link) }}</a>
   </div>
 </section>
 </div>
@@ -469,12 +469,23 @@ export default {
           this.fields.logos = document.data.logos;
           this.nowlanguage = document.lang;
         })
+        this.$prismic.client.getSingle('privacy_policy', { lang : language })
+        .then((document) => {
+          this.fields.privacy_policy_title = document.data.privacy_policy_title;
+          this.fields.desc = document.data.desc;
+          this.fields.name = document.data.name;
+          this.fields.position = document.data.position;
+          this.fields.e_mail = document.data.e_mail;
+          this.fields.button_text = document.data.button_text;
+          this.fields.person_image = document.data.person_image;
+        })
     },
-  alertPrivacy() {
-                this.$buefy.dialog.alert({
-                    title: 'Privacy policy',
-                    message: 'Your data is important to us. This site allows us to access your current skills and see where we can help you with improvements. This is not a career site. We use the data you provide us to match you to training opportunities and possible employment networks. Your data is handled by a person with the utmost care, privacy and diligence. If you have any questions about our data policy please contact.',
-                    confirmText: 'Close'
+  alertPrivacy(privacy_policy_title, desc, button_text) {
+                this.$buefy.dialog.alert(
+                {
+                    title: privacy_policy_title,
+                    message: desc,
+                    confirmText: button_text
                 })
             },
   promptNumber() {
