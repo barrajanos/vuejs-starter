@@ -149,7 +149,7 @@
                     <b-button v-if="nowlanguage === 'hu'" type="is-primary" onclick="window.location.href='https://empyr-arthanis.netlify.app/#?lang=hu';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
                     <b-button v-if="nowlanguage === 'sk'" type="is-primary" onclick="window.location.href='https://empyr-arthanis.netlify.app/#?lang=sk';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
                     <b-button v-if="nowlanguage === 'ro'" type="is-primary" onclick="window.location.href='https://empyr-arthanis.netlify.app/#?lang=ro';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
-                     <b-button v-if="nowlanguage === 'en-us'" type="is-primary" onclick="window.location.href='https://empyr-arthanis.netlify.app/#?lang=en-us';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
+                     <b-button v-if="nowlanguage === 'en'" type="is-primary" onclick="window.location.href='https://empyr-arthanis.netlify.app/#?lang=en-us';" size="is-large" class="red button-radius mt-10">{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
         </div>
        <div class="notgood" v-else>
                     <b-button type="is-primary" size="is-large" class="red button-radius mt-10" disabled>{{ $prismic.richTextAsPlain(fields.application_button_text) }}</b-button>
