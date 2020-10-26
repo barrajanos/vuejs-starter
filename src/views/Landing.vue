@@ -159,7 +159,7 @@
     </div>
     <script type="text/x-template" id="modal-template">
     <transition name="modal">
-     <form action="">
+     <form>
                 <div class="modal-card" style="width:400px">
                     <header class="modal-card-head">
                         <p class="modal-card-title"></p>
@@ -171,6 +171,7 @@
                     <section class="modal-card-body">
                         <b-field>E-mail
                             <b-input
+                                name="email"
                                 type="email"
                                 :value="email"
                                 placeholder=""
@@ -180,6 +181,7 @@
 
                         <b-field>{{$prismic.richTextAsPlain(fields.your_county)}}
                             <b-input
+                                name="county"
                                 type="text"
                                 :value="text"
                                 placeholder=""
