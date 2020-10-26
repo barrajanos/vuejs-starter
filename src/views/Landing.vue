@@ -139,7 +139,7 @@
     </div>
           <div class="error-message" v-show="radioLive === 'no'">
       <prismic-rich-text :field="fields.ko[1].ko_error_message"/>
-      <div><a @click="promptNumber"><prismic-rich-text :field="fields.subscribe"/></a></div>
+      <div><a @click="cardModal()"><prismic-rich-text :field="fields.subscribe"/></a></div>
       </div>
   </div>
     <hr>
@@ -386,6 +386,45 @@
 
 <script>
 
+const ModalForm = {
+        props: ['email', 'county'],
+        template: `
+            <form action="">
+                <div class="modal-card" style="width: auto">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Subscibe</p>
+                        <button
+                            type="button"
+                            class="delete"
+                            @click="$emit('close')"/>
+                    </header>
+                    <section class="modal-card-body">
+                        <b-field label="Email">
+                            <b-input
+                                type="email"
+                                :value="email"
+                                placeholder="Your email"
+                                required>
+                            </b-input>
+                        </b-field>
+
+                        <b-field label="County">
+                            <b-input
+                                type="text"
+                                :value="text"
+                                placeholder="Your county"
+                                required>
+                            </b-input>
+                        </b-field>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button is-primary red button-radius">Subscribe</button>
+                    </footer>
+                </div>
+            </form>
+        `
+    }
+
 export default {
   data () {
     return {
@@ -491,18 +530,14 @@ export default {
                     confirmText: button_text
                 })
             },
-  promptNumber() {
-            this.$buefy.dialog.prompt({
-                message: `E-mail`,
-                inputAttrs: {
-                    type: 'email',
-                    placeholder: '',
-                    value: '',
-                    confirmText: 'Send'
-                },
-                trapFocus: true,
-                onConfirm: (value) => this.$buefy.toast.open('Thank you!')
-            })
+  cardModal() {
+                this.$buefy.modal.open({
+                    parent: this,
+                    component: ModalForm,
+                    hasModalCard: true,
+                    customClass: 'custom-class custom-class-2',
+                    trapFocus: true
+                })
             }
         },
   created () {
