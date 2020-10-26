@@ -390,7 +390,7 @@ const ModalForm = {
         props: ['email', 'county'],
         template: `
             <form action="">
-                <div class="modal-card" style="width: auto">
+                <div class="modal-card" style="width:400px">
                     <header class="modal-card-head">
                         <p class="modal-card-title">Subscibe</p>
                         <button
@@ -418,7 +418,7 @@ const ModalForm = {
                         </b-field>
                     </section>
                     <footer class="modal-card-foot">
-                        <button class="button is-primary red button-radius">Subscribe</button>
+                        <button class="button is-primary red button-radius has-text-weight-bold">Subscribe</button>
                     </footer>
                 </div>
             </form>
