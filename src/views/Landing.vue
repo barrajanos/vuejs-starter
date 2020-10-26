@@ -139,7 +139,7 @@
     </div>
           <div class="error-message" v-show="radioLive === 'no'">
       <prismic-rich-text :field="fields.ko[1].ko_error_message"/>
-      <div><a @click="cardModal()"><prismic-rich-text :field="fields.subscribe"/></a></div>
+      <div><a @click="cardModal($prismic.richTextAsPlain(fields.your_county), $prismic.richTextAsPlain(fields.subscribe), $prismic.richTextAsPlain(fields.thank_you_for_your_subscribe))"><prismic-rich-text :field="fields.subscribe"/></a></div>
       </div>
   </div>
     <hr>
@@ -157,6 +157,43 @@
               <p class="mt-3 how-long"><b-icon class="is-hidden-mobile" icon="clock-time-one-outline" size="is-small"></b-icon><prismic-rich-text :field="fields.how_long_it_takes_"/></p>
               </div>
     </div>
+    <script type="text/x-template" id="modal-template">
+    <transition name="modal">
+     <form action="">
+                <div class="modal-card" style="width:400px">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title"></p>
+                        <button
+                            type="button"
+                            class="delete"
+                            @click="$emit('close')"/>
+                    </header>
+                    <section class="modal-card-body">
+                        <b-field>E-mail
+                            <b-input
+                                type="email"
+                                :value="email"
+                                placeholder=""
+                                required>
+                            </b-input>
+                        </b-field>
+
+                        <b-field>{{$prismic.richTextAsPlain(fields.your_county)}}
+                            <b-input
+                                type="text"
+                                :value="text"
+                                placeholder=""
+                                required>
+                            </b-input>
+                        </b-field>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button is-primary red button-radius has-text-weight-bold">{{ $prismic.richTextAsPlain(fields.subscribe) }}</button>
+                    </footer>
+                </div>
+            </form>
+            </transition>
+            </script>
   </div>
 </div>
 </div>
@@ -388,41 +425,7 @@
 
 const ModalForm = {
         props: ['email', 'county'],
-        template: `
-            <form action="">
-                <div class="modal-card" style="width:400px">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">Subscibe</p>
-                        <button
-                            type="button"
-                            class="delete"
-                            @click="$emit('close')"/>
-                    </header>
-                    <section class="modal-card-body">
-                        <b-field label="Email">
-                            <b-input
-                                type="email"
-                                :value="email"
-                                placeholder="Your email"
-                                required>
-                            </b-input>
-                        </b-field>
-
-                        <b-field label="County">
-                            <b-input
-                                type="text"
-                                :value="text"
-                                placeholder="Your county"
-                                required>
-                            </b-input>
-                        </b-field>
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button class="button is-primary red button-radius has-text-weight-bold">Subscribe</button>
-                    </footer>
-                </div>
-            </form>
-        `
+        template: "#modal-template"
     }
 
 export default {
@@ -436,6 +439,7 @@ export default {
         ko_header_title: null,
         ko: null,
         subscribe: null,
+        your_county: null,
         application_button_text: null,
         how_long_it_takes_: null,
         thank_you_for_your_subscribe: null,
@@ -482,6 +486,7 @@ export default {
           this.fields.ko_header_title = document.data.ko_header_title;
           this.fields.ko = document.data.ko;
           this.fields.subscribe = document.data.subscribe;
+          this.fields.your_county = document.data.your_county;
           this.fields.application_button_text = document.data.application_button_text;
           this.fields.how_long_it_takes_ = document.data.how_long_it_takes_;
           this.fields.thank_you_for_your_subscribe = document.data.thank_you_for_your_subscribe;
@@ -530,7 +535,7 @@ export default {
                     confirmText: button_text
                 })
             },
-  cardModal() {
+  cardModal(your_county, subscribe, thank_you_for_your_subscribe) {
                 this.$buefy.modal.open({
                     parent: this,
                     component: ModalForm,
