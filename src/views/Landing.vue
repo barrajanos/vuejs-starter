@@ -340,7 +340,7 @@
   <div class="column is-4">
     <h3 class="is-size-5 has-text-weight-bold">{{ $prismic.richTextAsPlain(fields.office_title) }}</h3>
     <p>{{ $prismic.richTextAsPlain(fields.office_desc) }}</p>
-    <a href="https://www.google.com/maps/dir//Budapest,+V%C3%A1ci+%C3%BAt+99,+1139/@47.5401294,19.0682121,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4741dbc3bf1ad84f:0xb82a173c4b2f049e!2m2!1d19.0704008!2d47.5401294">
+    <a :href="predirection + $prismic.richTextAsPlain(fields.office_desc)">
                           <img
                           src="../assets/img/navigation.svg"
                           alt="Direction"
@@ -468,6 +468,7 @@ export default {
       radioLive: '',
       premail: 'mailto:',
       pretel: 'tel:',
+      predirection: 'https://www.google.com/maps/dir/',
     };
   },
   methods: {
