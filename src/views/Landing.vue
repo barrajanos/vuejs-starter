@@ -351,13 +351,6 @@
     <div class="column is-4">
         <h3 class="is-size-5 has-text-weight-bold">{{ $prismic.richTextAsPlain(fields.contact_us_title) }}</h3>
         <p>{{ $prismic.richTextAsPlain(fields.contact_us_desc) }}</p>
-    <a href="">
-                          <img
-                          src="../assets/img/messenger.svg"
-                          alt="Send message"
-                      >
-                      <span>{{ $prismic.richTextAsPlain(fields.contact_messenger_link) }}</span>
-      </a>
           <a :href="pretel + $prismic.richTextAsPlain(fields.contact_telephone_link)">
                           <img
                           src="../assets/img/tel.svg"
