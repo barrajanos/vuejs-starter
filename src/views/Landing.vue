@@ -291,7 +291,7 @@
                 <div class="level">
                 <div class="media-left">
                   <figure class="image is-48x48">
-                    <img src="../assets/img/test-image.png" alt="Placeholder image">
+                    <prismic-image :field="fields.testimonials_items[0].image"/>
                   </figure>
                 </div>
                 <div class="media-content">
