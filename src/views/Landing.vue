@@ -468,7 +468,7 @@ export default {
       radioLive: '',
       premail: 'mailto:',
       pretel: 'tel:',
-      predirection: 'https://www.google.com/maps/dir/',
+      predirection: 'https://www.google.com/maps/dir//',
     };
   },
   methods: {
